@@ -344,12 +344,14 @@
 "Assets/My Project/Scripts/BlockView.cs"
 "Assets/My Project/Scripts/CharacterView.cs"
 "Assets/My Project/Scripts/CustomAnimation.cs"
+"Assets/My Project/Scripts/MainHeroWalker.cs"
 "Assets/My Project/Scripts/ParalaxManager.cs"
 "Assets/My Project/Scripts/Root.cs"
 "Assets/My Project/Scripts/SpriteAnimationConfig.cs"
 "Assets/My Project/Scripts/SpriteAnimator.cs"
 "Assets/My Project/Scripts/SpritesSequence.cs"
 "Assets/My Project/Scripts/Track.cs"
+"Assets/My Project/Scripts/Utils.cs"
 -langversion:8.0
 
 /deterministic
