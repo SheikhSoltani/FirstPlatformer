@@ -16,28 +16,26 @@ public class Root : MonoBehaviour
     private SpriteAnimationConfig _spriteAnimationConfig;
 
 
-
     private ParalaxManager _paralaxManager;
     private SpriteAnimator _spriteAnimator;
-    private MainHeroWalker _mainHeroWalker;
+    private MainHeroPhysicsWalker _mainHeroWalker;
 
     private void Start()
     {
         _paralaxManager = new ParalaxManager(_camera, _background.transform);
         _spriteAnimator = new SpriteAnimator(_spriteAnimationConfig);
-        _mainHeroWalker = new MainHeroWalker(_characterView, _spriteAnimator);
+        _mainHeroWalker = new MainHeroPhysicsWalker(_characterView, _spriteAnimator);
     }
 
     private void Update()
     {
         _paralaxManager.Update();
         _spriteAnimator.Update();
-        _mainHeroWalker.Update();
     }
 
     private void FixedUpdate()
     {
-
+        _mainHeroWalker.FixedUpdate();
     }
 
     private void OnDestroy()
