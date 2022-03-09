@@ -28,10 +28,8 @@ public class CharacterView : MonoBehaviour
     private float _flyTresh = 0.3f;
 
     [SerializeField]
-    private float _groundLevel = 0.1f;
+    private float _bonusCount = 0f;
 
-    [SerializeField]
-    private float _acceleration = -10f;
 
     public SpriteRenderer SpriteRenderer => _spriteRenderer;
     public float WalkSpeed => _walkSpeed;
@@ -39,8 +37,19 @@ public class CharacterView : MonoBehaviour
     public float JumpStartSpeed => _jumpStartSpeed;
     public float MovingTresh => _movingTresh;
     public float FlyTresh => _flyTresh;
-    public float GroundLevel => _groundLevel;
-    public float Acceleration => _acceleration;
+    public float BonusCount => _bonusCount;
     public Collider2D Collider => _collider;
     public Rigidbody2D Rigidbody => _rigidbody;
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Bonus")
+        {
+            Debug.Log("Bonus");
+
+            _bonusCount++;
+            col.gameObject.SetActive(false);
+            //this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.2f;
+        }
+    }
 }

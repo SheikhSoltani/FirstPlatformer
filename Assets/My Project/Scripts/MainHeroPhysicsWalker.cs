@@ -43,7 +43,7 @@ public class MainHeroPhysicsWalker
         _characterView.Rigidbody.velocity = _characterView.Rigidbody.velocity.Change(x: newVelocity);
 
         if (_contactsPoller.IsGrounded && doJump && Mathf.Abs(_characterView.Rigidbody.velocity.y) <= _characterView.FlyTresh)
-            _characterView.Rigidbody.AddForce(Vector2.up * _characterView.JumpStartSpeed);
+            _characterView.Rigidbody.AddForce(Vector2.up * _characterView.JumpStartSpeed);//Debug.Log(_characterView.Rigidbody.velocity.y);
             
         if (_contactsPoller.IsGrounded)
         {
