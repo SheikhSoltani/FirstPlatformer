@@ -19,10 +19,12 @@ public class MainHeroPhysicsWalker
         _contactsPoller = new ContactsPoller(characterView.Collider);
     }
 
+
     public void FixedUpdate()
     {
         var doJump = Input.GetAxis(Vertical) > 0;
         var xAxisInput = Input.GetAxis(Horizontal);
+        var doDash = Input.GetButtonDown("Fire1");
 
         _contactsPoller.Update();
 
@@ -33,11 +35,15 @@ public class MainHeroPhysicsWalker
 
         var newVelocity = 0f;
 
-        if (isGoSideWay && 
-            (xAxisInput > 0 || !_contactsPoller.HasLeftContacts) &&
-            (xAxisInput < 0 || !_contactsPoller.HasRightContacts))
+        if (isGoSideWay && !Mathf.Approximately(xAxisInput, 0))
         {
             newVelocity = Time.fixedDeltaTime * _characterView.WalkSpeed * (xAxisInput < 0 ? -1 : 1); 
+        }
+
+        if (doDash==true)
+        {
+            Debug.Log(Input.mousePosition);
+            //doDash = false;
         }
 
         _characterView.Rigidbody.velocity = _characterView.Rigidbody.velocity.Change(x: newVelocity);
