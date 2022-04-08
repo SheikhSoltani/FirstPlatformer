@@ -23,6 +23,7 @@ public class MainHeroPhysicsWalker
     public void FixedUpdate()
     {
         var doJump = Input.GetAxis(Vertical) > 0;
+        bool doubleJump;
         var xAxisInput = Input.GetAxis(Horizontal);
         var doDash = Input.GetButtonDown("Fire1");
 
@@ -42,7 +43,7 @@ public class MainHeroPhysicsWalker
 
         if (doDash==true)
         {
-            Debug.Log(Input.mousePosition);
+            //Debug.Log(Input.mousePosition);
             //doDash = false;
         }
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 215538297624132659}
   - component: {fileID: 215538297624132687}
   - component: {fileID: 215538297624132686}
+  - component: {fileID: 2953509271406498069}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -152,7 +153,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.006180048, y: 0.6231364}
-  m_ConnectedAnchor: {x: -0.53918004, y: -0.66486347}
+  m_ConnectedAnchor: {x: -1.99318, y: -1.3578635}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 60
@@ -161,3 +162,22 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!95 &2953509271406498069
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215538297624132657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ae94f2e2a73dd24da8a3f31a47cd972, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
